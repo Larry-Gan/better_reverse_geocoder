@@ -35,7 +35,7 @@ def load_countries():
     """Loads and prepares the country polygons."""
     print("Loading country data...")
     # filepath = os.path.join(config.DATA_DIR, 'ne_50m_admin_0_countries.shp')
-    filepath = "../TM_WORLD_BORDERS-0.3/TM_WORLD_BORDERS-0.3.shp"
+    filepath = r"C:\Users\larry\Desktop\Geoguessr ML Proj\Geolocation-Project\TM_WORLD_BORDERS-0.3\TM_WORLD_BORDERS-0.3.shp"
     usecols = config.COUNTRY_NAME_COLS + ['geometry']
     countries = _load_shapefile_helper(filepath, usecols=usecols)
     countries['REGION_NAME'] = countries['REGION'].map(mappings.REGION_MAPPING).fillna('')
